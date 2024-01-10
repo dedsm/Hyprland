@@ -88,18 +88,18 @@
       "flake": false,
       "locked": {
         "host": "gitlab.freedesktop.org",
-        "lastModified": 1703963193,
-        "narHash": "sha256-ke8drv6PTrdQDruWbajrRJffP9A9PU6FRyjJGNZRTs4=",
+        "lastModified": 1704825542,
+        "narHash": "sha256-JOrvP2cSCdpFEArVbIwBdRtRcayd7MszbCREEefQFh8=",
         "owner": "wlroots",
         "repo": "wlroots",
-        "rev": "f81c3d93cd6f61b20ae784297679283438def8df",
+        "rev": "ce89f49b7aab281198fad64e9a825a24dbf72e3d",
         "type": "gitlab"
       },
       "original": {
         "host": "gitlab.freedesktop.org",
         "owner": "wlroots",
         "repo": "wlroots",
-        "rev": "f81c3d93cd6f61b20ae784297679283438def8df",
+        "rev": "ce89f49b7aab281198fad64e9a825a24dbf72e3d",
         "type": "gitlab"
       }
     },
