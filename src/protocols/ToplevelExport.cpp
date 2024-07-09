@@ -409,7 +409,20 @@ bool CToplevelExportProtocolManager::copyFrameShm(SScreencopyFrame* frame, times
 
     glPixelStorei(GL_PACK_ALIGNMENT, 1);
 
-    glReadPixels(0, 0, frame->box.width, frame->box.height, PFORMAT->glFormat, PFORMAT->glType, pixelData);
+    Debug::log(LOG, "Monitor DRM Format: {:x}", PMONITOR->drmFormat);
+    Debug::log(LOG, "OpenGL Format: {:x}", PFORMAT->glFormat);
+    Debug::log(LOG, "OpenGL Type: {:x}", PFORMAT->glType);
+    glReadPixels(0, 0, frame->box.width, frame->box.height, GL_BGRA, PFORMAT->glType, pixelData);
+    //for (int y = 0; y < frame->box.height; ++y) {
+        //for (int x = 0; x < frame->box.width; ++x) {
+            //int pixelIndex = (y * frame->box.width + x) * 4; // 4 bytes per pixel (ARGB8888)
+            //if (x % 100 < 50) {  // Red line (adjust '10' for line width)
+                //pixelData[pixelIndex + 1] = 255; // Green channel
+            //} else {  // Blue line
+                //pixelData[pixelIndex + 3] = 255; // Blue channel
+            //}
+        //}
+    //}
 
     if (frame->overlayCursor) {
         g_pPointerManager->unlockSoftwareForMonitor(PMONITOR->self.lock());
